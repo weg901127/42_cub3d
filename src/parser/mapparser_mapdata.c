@@ -6,13 +6,13 @@
 /*   By: jekim <jekim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 07:52:55 by jekim             #+#    #+#             */
-/*   Updated: 2022/03/14 02:32:15 by jekim            ###   ########.fr       */
+/*   Updated: 2022/03/15 17:14:23 by gilee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3d.h"
 
-static void define_spwan_direction(char position_value, int *direction_flag)
+static void	define_spwan_direction(char position_value, int *direction_flag)
 {
 	if (position_value == 'N')
 		*direction_flag |= SPWAN_NO;
@@ -77,8 +77,8 @@ int	convert_mapdata_matrix(t_data *data)
 	ret[data->map->h] = NULL;
 	while (++ix < data->map->h)
 	{
-		ret[ix] = malloc_mapdata_row(lst->row, data->map->w, 
-					&data->camera->spwandir);
+		ret[ix] = malloc_mapdata_row(lst->row, data->map->w,
+				&data->camera->spwandir);
 		if (!ret[ix])
 			return (ERROR_OCCURED);
 		lst = lst->next;

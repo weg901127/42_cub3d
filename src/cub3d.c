@@ -6,17 +6,17 @@
 /*   By: jekim <jekim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 13:59:38 by jekim             #+#    #+#             */
-/*   Updated: 2022/03/13 15:43:25 by jekim            ###   ########.fr       */
+/*   Updated: 2022/03/15 17:01:59 by gilee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
-int print_mapmatrix(t_map *map)
+int	print_mapmatrix(t_map *map)
 {
-	int ix;
-	int jx;
-	
+	int	ix;
+	int	jx;
+
 	ix = 0;
 	while (ix < map->h)
 	{

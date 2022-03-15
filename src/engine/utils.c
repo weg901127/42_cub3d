@@ -6,7 +6,7 @@
 /*   By: jekim <jekim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 20:35:47 by jekim             #+#    #+#             */
-/*   Updated: 2022/03/14 04:41:52 by jekim            ###   ########.fr       */
+/*   Updated: 2022/03/15 17:10:07 by gilee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	draw_texture_vertical_line(t_window *win,
 			t_texture_drawing_pack *tdp, int ray_index)
 {
-	double step;
-	double texPos;
-	int i;
-	int texHeight;
+	double	step;
+	double	texPos;
+	int		i;
+	int		texHeight;
 
 	step = 1.0 * tdp->txtr_ptr->h / tdp->line_h;
 	texPos = (tdp->yAxis_drawIndex.x - win->h / 2 + tdp->line_h / 2) * step;
@@ -28,8 +28,8 @@ void	draw_texture_vertical_line(t_window *win,
 	{
 		tdp->txtr_drawIdx.y = (int)texPos & (texHeight - 1);
 		texPos += step;
-		*(win->pixel[ray_index][i].color) = tdp->txtr_ptr->rowdata[texHeight *
-				tdp->txtr_drawIdx.y + tdp->txtr_drawIdx.x];
+		*(win->pixel[ray_index][i].color) = tdp->txtr_ptr->rowdata[texHeight
+			* tdp->txtr_drawIdx.y + tdp->txtr_drawIdx.x];
 		i++;
 	}
 }

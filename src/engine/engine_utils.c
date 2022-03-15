@@ -6,7 +6,7 @@
 /*   By: jekim <jekim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 17:04:19 by gilee             #+#    #+#             */
-/*   Updated: 2022/03/14 01:32:42 by jekim            ###   ########.fr       */
+/*   Updated: 2022/03/15 17:04:42 by gilee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ double	define_ray_distance(t_camera *cam, t_ray *ray, int side)
 			/ ray->dir.y);
 }
 
-void 	init_camera_vectors_WE(t_vec *dirvec, t_vec *planevec, int *direction_flag)
+void	init_camera_vectors_WE(t_vec *dirvec,
+		t_vec *planevec, int *direction_flag)
 {
 	if (*direction_flag & SPWAN_WE)
 	{
@@ -47,8 +48,8 @@ void 	init_camera_vectors_WE(t_vec *dirvec, t_vec *planevec, int *direction_flag
 	*direction_flag = 0;
 }
 
-
-void 	init_camera_vectors_NS(t_vec *dirvec, t_vec *planevec, int *direction_flag)
+void	init_camera_vectors_NS(t_vec *dirvec,
+		t_vec *planevec, int *direction_flag)
 {
 	if (*direction_flag & SPWAN_NO)
 	{
