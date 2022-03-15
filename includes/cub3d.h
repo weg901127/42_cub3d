@@ -6,7 +6,7 @@
 /*   By: jekim <jekim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 14:00:33 by jekim             #+#    #+#             */
-/*   Updated: 2022/03/14 04:46:42 by jekim            ###   ########.fr       */
+/*   Updated: 2022/03/15 17:34:20 by gilee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,8 @@ void free_splited(char **splited);
 int	get_splited_len(char **splited);
 char **get_and_check_splited(char *src, char c, int check_l, char *key);
 
+int	img_loadchecker(t_texture *txtr);
+int	img_path_validator(const char *path);
 /*
 **	hooks_part
 */

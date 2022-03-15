@@ -6,7 +6,7 @@
 /*   By: jekim <jekim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:08:01 by jekim             #+#    #+#             */
-/*   Updated: 2022/03/11 03:21:26 by gilee            ###   ########.fr       */
+/*   Updated: 2022/03/15 17:40:18 by gilee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	callback_key(int code, t_data *data)
 
 void	set_hooks(t_data *data)
 {
+	mlx_hook(data->window->win_ptr, 17, 0, &callback_exit, data);
 	mlx_hook(data->window->win_ptr, EVENT_KEY_PRESS, 0,
 		&callback_key, (void *)data);
 }

@@ -44,6 +44,7 @@ SRCFILE =	cub3d.c	\
 
 PARSER_FILE		=	mapparser.c \
 					mapparser_img.c	\
+					mapparser_img_utils.c	\
 					mapparser_mapdata.c \
 					mapparser_mapdata_lst.c \
 					mapparser_RGB.c \
